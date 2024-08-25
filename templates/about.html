@@ -1,0 +1,99 @@
+{% extends 'layout.html' %} 
+
+{% block title %} About {% endblock %}
+
+{% block content %}
+
+{% comment %} 
+    <header class="fw-bold bg-primary text-center text-light p-3 fs-1 header text-uppercase">Contact</header>
+    <br /><br /><br />
+
+        <div>
+          <h1 class="text-center fw-bold text-uppercase">Hello, this is Roslaan</h1>
+
+        </div>
+        
+
+          <form method="" class="container-fluid" id="form">
+            <div class="row g-4">
+
+
+              <div class=" col-lg-6  col-md-6  col-sm-12" >
+                <label for="fname" class="form-label">First Name</label>
+                <input type="text" name="first_name" placeholder="John" class="form-control" id="fname"> 
+              </div>
+
+              <div class=" col-lg-6  col-md-6  col-sm-12" >
+                <label for="LName" class="form-label">Last Name</label>
+                <input type="text" name="last_name" placeholder="Doe" class="form-control" id="lname">
+              </div>
+
+              <div class=" col-lg-6  col-md-6  col-sm-12" >
+                <label for="fname" class="form-label">Email Address</label>
+                <input type="email" name="email" placeholder="aaaaaaa@gmail.com" class="form-control" id="email">
+              </div>
+
+              <div class=" col-lg-6  col-md-6  col-sm-12" >
+                <label for="fname" class="form-label">Phone Number</label>
+                <input type="number" name="" placeholder="0700000000" class="form-control" id="number">
+              </div>
+
+
+              <div class="form-group">
+                <label for="textarea1">Your Message</label>
+                <textarea class="form-control" id="textarea" name="message" rows="3"></textarea>
+              </div>
+
+              
+            </div>
+
+            
+           <br> <br>
+
+          <button class="btn btn-outline-primary col-12 text-lg-center text-md-center text-sm-center fw-bold apply text-uppercase submit" type="submit" onclick="sendwhatsapp()">Laugh Guy</button>
+           
+          </form>
+      </section> {% endcomment %}
+
+{% comment %} 
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit"><i class="fa fa-whatsapp" aria-hidden="true"></i> Send a Whatsapp Message</button>
+    </form> {% endcomment %}
+  
+  
+  
+    <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-md-6">
+              <h2 class="text-center mb-4">Send a WhatsApp Message</h2>
+              <form method="post">
+                  {% csrf_token %}
+                  <div class="form-group">
+                      <label for="id_name" class="form-label">Name</label>
+                      {{ form.name }}
+                  </div>
+                  <div class="form-group">
+                      <label for="id_last_name" class="form-label">Last Name</label>
+                      {{ form.last_name }}
+                  </div>
+                  <div class="form-group">
+                      <label for="id_email" class="form-label">Email</label>
+                      {{ form.email }}
+                  </div>
+                  <div class="form-group">
+                      <label for="id_phone_number" class="form-label">Phone Number</label>
+                      {{ form.phone_number }}
+                  </div>
+                  <div class="form-group">
+                      <label for="id_message" class="form-label">Message</label>
+                      {{ form.message }}
+                  </div> <br />
+                  <button type="submit" class="btn btn-outline-primary w-100 mb-2">Send a Message</button>
+              </form>
+          </div>
+      </div>
+  </div>
+  
+    {% endblock %}

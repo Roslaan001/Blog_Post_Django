@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+
+
+
+{% block title %}
+    Register a New User
+{% endblock %}
+
+{% block content %}
+
+    <div class="container m-auto w-100 h-100">
+        <div class="w-100">
+          <h3 class="text-center mb-1 mt-2">Register To Be New User</h3>
+          <form class="row g-3  m-auto" action="{% url 'users:register'%}" method="post">
+            {% csrf_token %}
+      
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              {{ form.first_name.label_tag }}
+              {{ form.first_name }}
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              {{ form.last_name.label_tag }}
+              {{ form.last_name }}
+            </div>
+      
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              {{ form.username.label_tag }}
+              {{ form.username }}
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              {{ form.email.label_tag }}
+              {{ form.email }}
+            </div>
+      
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              {{ form.password1.label_tag }}
+              {{ form.password1 }}
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              {{ form.password2.label_tag }}
+              {{ form.password2 }}
+            </div> <br/>
+      
+            <div class="col-12 m-auto">
+              <button type="submit" class="btn btn-outline-primary w-100 mb-2">Register</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+
+
+
+{% block title %}
+   User Login
+{% endblock %}
+
+{% block content %}
+<div class="container h-100 d-flex justify-content-center align-items-center">
+    <div class="w-100">
+        <h3 class="text-center mb-4 mt-2">User Login</h3>
+        <form class="form-with-validation" action="{% url 'users:login'%}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            {% if request.GET.next %}
+            <input type="hidden" name="next" value="{{ request.GET.next }}" />
+            {% endif %}
+            <div class="d-grid">
+                <button class="form-submit btn btn-outline-primary w-50 m-auto">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
