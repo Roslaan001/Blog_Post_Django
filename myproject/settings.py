@@ -104,11 +104,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'myproject.wsgi.application'
 
 
-AUTHENTICATION_BACKENDS = [
-    'allauth.account.auth_backends.AuthenticationBackend',
-]
-
-
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
