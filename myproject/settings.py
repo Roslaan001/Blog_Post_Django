@@ -111,7 +111,7 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 
 DATABASES = {
   'default': dj_database_url.config(
-        default=env("DATABASE_URL")  # Use DATABASE_URL from the .env file
+        default=env("DATABASE_URL")  
     )
 }
 
