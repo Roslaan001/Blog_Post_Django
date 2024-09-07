@@ -1,7 +1,9 @@
-asgiref==3.7.2
-dj-database-url==2.0.0
-Django==3.2.19
-gunicorn==20.1.0
-psycopg2==2.9.6
-sqlparse==0.4.4
-typing_extensions==4.7.0
+asgiref==3.8.1
+dj-database-url==2.2.0
+Django==5.1.1
+gunicorn== 23.0.0
+psycopg2==2.9.9
+sqlparse==0.5.1
+typing_extensions==4.12.2
+environ==1.0
+django-environ==0.11.2
