@@ -1,1 +1,0 @@
-alert ("External CSS is not supported");

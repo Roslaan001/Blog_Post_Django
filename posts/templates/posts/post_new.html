@@ -1,55 +1,29 @@
-{% extends 'layout.html' %} 
-{% block title %} New Post {% endblock %} 
 
-{% block content %}
+{% extends 'layout.html' %}
+
+ {% block title %} New Post {% endblock %} 
+ 
+
+
+ {% block content %}
 <section class="container mt-5">
   <h3 class="mb-4 text-center">Make A New Post</h3>
 
-  <form class='form-with-validation needs-validation' action="{% url 'posts:new-post'%}" method="post" enctype="multipart/form-data" novalidate>
+  <form
+    class="form-with-validation needs-validation"
+    action="{% url 'posts:new-post'%}"
+    method="post"
+    enctype="multipart/form-data"
+    novalidate
+  >
     {% csrf_token %}
-    <div class="mb-3">
-      {{ form}}
-    </div>
+    <div class="mb-3">{{ form}}</div>
 
-    <div class="form-group">
-      <label for="id_message" class="form-label">Body</label>
-      {{ form.body }}
-  </div>
-    <button type="submit" class="btn btn-outline-primary w-100 mb-2">Add a New Post</button>
+    
+    <button type="submit" class="btn btn-outline-primary w-100 mb-2">
+      Add a New Post
+    </button>
   </form>
 </section>
-
-<div class="container">
-  <div class="row justify-content-center">
-      <div class="col-md-6">
-          <h2 class="text-center mb-4">Make a New post</h2>
-          <form method="post">
-              {% csrf_token %}
-              <div class="form-group">
-                  <label for="id_name" class="form-label">Title:</label>
-                  {{ form.title }}
-              </div>
-              <div class="form-group">
-                  <label for="id_last_name" class="form-label">Body:</label>
-                  {{ form.body }}
-              </div>
-              <div class="form-group">
-                  <label for="id_email" class="form-label">Slug:</label>
-                  {{ form.slug }}
-              </div>
-              <div class="form-group">
-                  <label for="id_phone_number" class="form-label">Banner:</label>
-                  {{ form.banner }}
-              </div>
-              <div class="form-group">
-                  <label for="id_message" class="form-label">Message</label>
-                  {{ form.message }}
-              </div> <br />
-              <button type="submit" class="btn btn-outline-primary w-100 mb-2">Send a Message</button>
-          </form>
-      </div>
-  </div>
-</div>
-
 
 {% endblock %}

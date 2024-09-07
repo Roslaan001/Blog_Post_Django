@@ -9,9 +9,9 @@ from posts.models import Post
 def home(request):
     posts = Post.objects.all().order_by('-date')
     if request.user.is_authenticated:
-        welcome_message = f"Welcome to the my awesome Blog, Dear {request.user.username}"
+        welcome_message = f"Welcome to the my awesome blog, Dear {request.user.username} ❤️❤️❤️"
     else:
-        welcome_message = "Welcome to the homepage dear Visitor, you can register in order to post a news"
+        welcome_message = "Welcome to the awesome blog dear visitor ❤️❤️❤️"
 
     context = {'posts': posts, 'welcome_message': welcome_message}
     return render(request, 'home.html', context)
