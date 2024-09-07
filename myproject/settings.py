@@ -49,7 +49,6 @@ SITE_ID = 1
 
 
 # Email configuration settings
-
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 465 
@@ -61,7 +60,6 @@ DEFAULT_FROM_EMAIL = 'abdulsomad005@gmail.com'
 
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',  
     'django.contrib.auth',
@@ -110,8 +108,7 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
-
+# Database configuration of PostgreSQL
 
 DATABASES = {
   'default': dj_database_url.config(
