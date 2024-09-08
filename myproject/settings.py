@@ -14,8 +14,6 @@ import os
 import environ
 from pathlib import Path
 import dj_database_url
-import environ
-import dj_database_url
 import sys
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -57,6 +55,7 @@ EMAIL_PORT = 465
 EMAIL_USE_SSL = True
 EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
+print(os.environ.get("EMAIL_HOST_PASSWORD"))
 DEFAULT_FROM_EMAIL = 'abdulsomad005@gmail.com'
 
 
@@ -115,7 +114,6 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # Replace the SQLite DATABASES configuration with PostgreSQL:
 DATABASES = {
     'default': dj_database_url.config(
-        # Replace this value with your local database's connection string.
         default='postgresql://blogpost_9qy8_user:MUzOOEgcvySquPVlDRsQCbyrwoPkvehZ@dpg-crdvd5rv2p9s73cnob0g-a/blogpost_9qy8',
         conn_max_age=600
     )
