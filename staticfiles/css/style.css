@@ -66,7 +66,7 @@ nav li a {
   font-size: 1rem !important;
   color: white !important;
   font-weight: 400 !important;
-  text-transform: uppercase;
+  text-transform: uppercase !important;
   padding: 10px 20px !important;
 }
 
